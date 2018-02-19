@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+         
+<configuration>
+    <!--  mappers>
+        <mapper resource="mybatis/mapper.xml" />
+    </mappers -->
+
+    <typeAliases>
+        <typeAlias alias="MemberInfo" type="org.happy.poor.members.model.MemberInfoVo" />
+        <typeAlias alias="hashMap" type="java.util.HashMap" />
+        
+        <typeAlias alias="StoryInfo" type="org.happy.poor.story.model.StoryInfoVo" />
+        <typeAlias alias="TravelInfo" type="org.happy.poor.travel.model.TravelInfoVo" />
+        <typeAlias alias="GalleryInfo" type="org.happy.poor.gallery.model.GalleryInfoVo" />
+        
+    </typeAliases>
+    
+</configuration>

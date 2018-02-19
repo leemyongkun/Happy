@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.happy.poor.files.dao.IFilesDao">
+
+	<insert id="insert" parameterType="hashMap" >
+		INSERT INTO ATTACHFILE(userid, title, contents, original_file_name, md5_file_name,file_type, reg_date) 
+		VALUE(#{userid},#{title},#{contents},#{originalFileName},#{md5FileName},#{fileType},#{reg_date})		
+	</insert>
+	
+	<select id="selectAll" resultType="hashMap" parameterType="String">
+		SELECT
+			USERID,
+			TITLE,
+			CONTENTS,
+			ORIGINAL_FILE_NAME,
+			MD5_FILE_NAME,
+			FILE_TYPE,
+			REG_DATE
+		FROM ATTACHFILE;
+	</select>
+	
+	<delete id="delete" parameterType="hashMap" >
+		DELETE FROM ATTACHFILE 
+		<where>
+			id=#{id}
+		</where>
+			and md5_attach_name=#{md5FileName}
+	</delete>
+	
+	
+</mapper>

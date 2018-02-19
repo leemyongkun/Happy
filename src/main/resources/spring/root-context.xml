@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	
+	<util:properties id="flower" location="classpath:db/dbConnectionInfo.xml"/>
+	<util:properties id="memberInfo" location="classpath:db/security/memberinfo.xml"/>
+	
+    <!-- <util:properties id="config" location="classpath:config/config.properties"/> -->
+    
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="connectionFactoryLocator"
+		class="org.springframework.social.connect.support.ConnectionFactoryRegistry">
+		<property name="connectionFactories">
+			<list>
+				<bean
+					class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+					<constructor-arg value="340409039482823" />
+					<constructor-arg value="bcce0fdf6c35656a413737ade0b7b1cf" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	
+	
+	
+	<!--  DB Connect Setting-->
+	<!--  bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource"  destroy-method="close">
+		<property name="driverClassName" value="#{flower['driverClassName']}" />
+		<property name="url" value="#{flower['url']}" />
+		<property name="username" value="#{flower['username']}" />
+		<property name="password" value="#{flower['password']}" />
+	</bean>
+	
+	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="dataSourceSpied" />
+		<property name="logFormatter">
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<property name="loggingType" value="MULTI_LINE" />
+				<property name="sqlPrefix" value="SQL:::" />
+			</bean>
+		</property>
+	</bean -->
+	
+		
+	<!--  MyBatis Setting -->
+<!-- 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
+	<!--  bean id="sqlSessionFactoryBean" class="org.happy.poor.dev.RefreshableSqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation"	value="classpath:db/mybatis/mybatis-config.xml"/>
+		<property name="mapperLocations"	value="classpath*:db/mybatis/mapper/**/*.xml"/>
+		<property name="interval" value="2000" /> 
+	</bean>
+	
+	<bean id="sqlSessionTemplate"	class="org.mybatis.spring.SqlSessionTemplate"  destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
+	</bean>
+	
+	<bean id="transactionManeger" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">    
+        <property name="dataSource" ref="dataSource" />
+    </bean -->
+	
+</beans>

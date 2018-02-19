@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+		"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+		"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="default" 	template="/WEB-INF/views/common/template.jsp">
+		<!-- <put-attribute name="title" value="Ministry Of Economy - Official e-Service"/>
+		<put-attribute name="globals" value="/WEB-INF/views/common/templates/default/globals.jsp"/> -->
+		<put-attribute name="include_css" value="/WEB-INF/views/common/include_css.jsp"/>
+		<put-attribute name="include_js" value="/WEB-INF/views/common/include_js.jsp"/>
+		<put-attribute name="topbar" value="/WEB-INF/views/common/topbar.jsp"/>	
+		<put-attribute name="navbar" value="/WEB-INF/views/common/navbar.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+		<put-attribute name="slider" value="/WEB-INF/views/common/slider.jsp"/>
+		<put-attribute name="menu" value="/WEB-INF/views/common/menu.jsp"/>
+		<put-attribute name="body" value="/WEB-INF/views/common/body.jsp"/>
+		<put-attribute name="modal" value="/WEB-INF/views/common/modal.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
+	</definition>
+	
+	<definition name="*/*" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp"/>
+	</definition>
+
+</tiles-definitions>

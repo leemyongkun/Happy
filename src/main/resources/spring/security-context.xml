@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+		xmlns="http://www.springframework.org/schema/security"    
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+		xmlns:beans="http://www.springframework.org/schema/beans"    
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+							http://www.springframework.org/schema/beans/spring-beans-4.0.xsd                    
+							http://www.springframework.org/schema/security
+							http://www.springframework.org/schema/security/spring-security-3.2.xsd" >
+
+	<!-- Configuration for excluding resources patterns -->
+	<http pattern="/images/**" security="none" />
+	<http pattern="/css/**" security="none" />
+	<http pattern="/font-awesome/**" security="none" />
+	<http pattern="/fonts/**" security="none" />
+	<http pattern="/js/**" security="none" />
+	<http pattern="/assets/**" security="none" />
+	<http pattern="/favicon.ico" security="none" />
+
+	<!-- Configuration for accessing url with authantification -->
+	<http auto-config="true" use-expressions="true">
+			
+		<intercept-url pattern="/login" access="permitAll" />
+		<intercept-url pattern="/**" access="permitAll"/>
+		
+		<!--
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')"/ 
+		<intercept-url pattern="/main" access="permitAll" />
+		<intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
+		-->
+		    
+	    <form-login
+	    	username-parameter="loginid"
+	    	password-parameter="loginpassword"
+	    	login-page="/login"
+	    	authentication-failure-url="/login?fail=true" 
+	    	authentication-success-handler-ref="securityAuthenticationSuccessHandler"
+	        default-target-url="/"
+	    	always-use-default-target="false"
+	    	/>
+	    	
+	    <logout logout-success-url="/authority/login" delete-cookies="JSESSIONID" />
+	    
+	    <!-- 동시접속제한 -->
+	    <session-management>
+	    	<concurrency-control max-sessions="1"  error-if-maximum-exceeded="true"/>
+	    </session-management>
+	    
+	</http>
+	<!-- 	authentication-success-handler-ref 기능이 들어가면 아래의 두 기능은 무의미해진다.
+		  -->
+	<beans:bean id="securityAuthenticationSuccessHandler"	class="org.happy.poor.common.security.SecurityAuthenticationSuccessHandler">
+		<beans:property name="defaultTargetUrl" value="/dashboard/dashboardMain" />
+	</beans:bean>
+	
+	<!-- Password encryption settings -->
+	<beans:bean id="bcryptPasswordEncoder"	class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	
+	<!-- Assigning authentification manager -->
+	<authentication-manager>
+		<authentication-provider user-service-ref="customJdbcDaoImpl">
+			<password-encoder ref="bcryptPasswordEncoder"/>
+		</authentication-provider>
+	
+		<!--
+	    <authentication-provider>
+	        <user-service>
+	            <user name="guest" password="guest" authorities="ROLE_USER"/>    
+	        </user-service>
+	    </authentication-provider>
+	    -->
+	</authentication-manager>
+	
+	<!-- Processing login using database -->
+	<beans:bean id="customJdbcDaoImpl" class="org.happy.poor.common.security.CustomJdbcDaoImpl">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="rolePrefix" value="" />
+		<beans:property name="usersByUsernameQuery" value="#{memberInfo['getMemberInfo']}" />
+		<beans:property name="authoritiesByUsernameQuery" value="#{memberInfo['getAuthorityInfo']}" />
+		<beans:property name="enableGroups" value="false" />
+	</beans:bean>
+
+	
+
+</beans:beans>

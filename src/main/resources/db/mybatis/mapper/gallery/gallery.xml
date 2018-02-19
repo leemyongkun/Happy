@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.happy.poor.gallery.dao.IGalleryDao">
+
+	<select id="list" resultType="GalleryInfo" parameterType="int">
+		SELECT img_url, description, reg_date FROM GALLERY_LINKS
+		ORDER BY REG_DATE DESC
+		LIMIT #{0} OFFSET #{1}
+	</select>
+	
+	
+</mapper>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.happy.poor.members.dao.IMemberDao">
+
+	<insert id="insertMember" parameterType="MemberInfo" >
+			
+		INSERT INTO 
+			MEMBERINFO 
+		VALUES (#{id},#{password},#{name},#{nickname},#{email},#{phone},#{sex},#{filename})		
+	</insert>
+	
+	
+	<insert id="insertAuthorityForMember" parameterType="hashMap" >
+			
+		INSERT INTO 
+			MEMBER_ROLE 
+		VALUES (#{authority},#{id})		
+	</insert>
+	
+	<select id="selectAll"  parameterType="hashMap" resultType="MemberInfo">
+		SELECT
+			ID,
+			NAME,
+			NICKNAME,
+			EMAIL,
+			PHONE,
+			SEX,
+			ROLE_ID AS AUTHORITY,
+			FILENAME
+		FROM MEMBERINFO LEFT JOIN MEMBER_ROLE
+		ON MEMBERINFO.ID = MEMBER_ROLE.MEMBER_ID
+		<if test="offset != 0">
+			LIMIT #{limit},#{offset}
+		</if> 
+		 
+	</select>
+	
+		<!-- MemberInfo -->
+	<select id="selectMember" resultType="hashMap">
+		SELECT
+			ID,
+			NAME,
+			NICKNAME,
+			EMAIL,
+			PHONE,
+			SEX,
+			ROLE_ID AS AUTHORITY,
+			FILENAME
+		FROM MEMBERINFO LEFT JOIN MEMBER_ROLE
+		ON MEMBERINFO.ID = MEMBER_ROLE.MEMBER_ID
+		<where>
+			ID = #{id}
+		</where>
+	
+	</select>
+	
+	<delete id="deleteMember" parameterType="String">
+		DELETE FROM MEMBERINFO
+		<where>
+			ID = #{id};
+		</where> 
+	</delete>
+	<delete id="deleteAuthorityForMember" parameterType="String">
+		DELETE FROM MEMBER_ROLE
+		<where>
+			MEMBER_ID = #{id};
+		</where> 
+	</delete>
+	
+	<select id="memberTotalCount" resultType="Integer">
+		SELECT COUNT(*) FROM MEMBERINFO;
+	</select>
+	
+	
+	
+</mapper>

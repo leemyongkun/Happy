@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+
+<!-- Common Code Definition -->
+<entry key="getMemberInfo">SELECT ID,PASSWORD, NAME FROM MEMBERINFO WHERE ID=?</entry>
+<entry key="getAuthorityInfo">SELECT ROLE_ID FROM MEMBER_ROLE WHERE MEMBER_ID=?</entry>
+
+</properties>
