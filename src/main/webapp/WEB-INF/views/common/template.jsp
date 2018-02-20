@@ -47,7 +47,7 @@
     <!-- End Modal Part -->
 
     <!--=== Footer Version 1 ===-->
-   	<tiles:insertAttribute name="footer"/>
+   	<!--  tiles:insertAttribute name="footer"/ -->
     <!--=== End Footer Version 1 ===-->
 </div><!--/wrapper-->
 

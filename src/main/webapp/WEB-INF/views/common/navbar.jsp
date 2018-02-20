@@ -2,7 +2,7 @@
 <!-- Navbar -->
         <div class="navbar navbar-default mega-menu" role="navigation">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- Brand and toggle get grouped for better mobile display 
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -27,12 +27,12 @@
 
 						<!-- About US-->
                         <li class="dropdown">
-                            <a href="javascript:void(0);">
+                            <a href="${contextRoot}/staff">
                                 About Us<!-- <mvc:message code="menu.main" /> -->
                             </a>
                             
                             
-                            <ul class="dropdown-menu">
+                            <!-- ul class="dropdown-menu">
                             	<li>
                             		<a href="${contextRoot}/staff">
                             			<i class="fa  fa-user"></i>
@@ -45,18 +45,17 @@
                             			Sponsor
                             		</a>
                             	</li>
-                            </ul>
+                            </ul -->
                         </li>
                         <!-- About US-->
                         
                         
-                        <!-- Pages -->                        
+                        <!-- Pages                         
                         <li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                PAGES<!-- <mvc:message code="menu.first" /> -->
+                                PAGES
                             </a>
                             <ul class="dropdown-menu">
-                            	<!-- Story Pages -->
                             	<li>
                             		<a href="${contextRoot}/story">
                             			<i class="fa  fa-paper-plane-o"></i>
@@ -74,22 +73,18 @@
                         </li>
                         <!-- End Pages -->
 
-    					<!-- GALLERY -->
+    					<!-- GALLERY  
                       <li class="dropdown">
-                            <a href="${contextRoot}/gallery"><!-- class="dropdown-toggle" data-toggle="dropdown" -->
+                            <a href="${contextRoot}/gallery">
                                 GALLERY
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li><a href="gallery?num=1">MENU 1</a></li>
-                                <li><a href="gallery?num=2">MENU 2</a></li>
-                            </ul> -->
                         </li>
                         <!-- End GALLERY -->
                         
-                        <!-- SUPPORT -->
+                        <!-- SUPPORT 
                         <li class="dropdown">
                             <a href="/">
-                                SUPPORT<!-- <mvc:message code="menu.main" /> -->
+                                SUPPORT
                             </a>
                         </li>
                         <!-- End SUPPORT -->
@@ -97,13 +92,13 @@
                         
                          <!-- Contacts -->
                         <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="${contextRoot}/qna">
                                 Contacts
                             </a>
-                            <ul class="dropdown-menu">
+                            <!-- ul class="dropdown-menu">
                                 <li><a href="${contextRoot}/qna">자주 하는 질문 </a></li>
                                 <li><a href="page_contact1.html">후원방법</a></li>
-                            </ul>
+                            </ul -->
                         </li>                    
                         <!-- End Contacts -->
                         
