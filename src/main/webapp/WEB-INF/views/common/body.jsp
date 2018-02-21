@@ -9,11 +9,9 @@
                         <div class="overflow-hidden">
                             <img class="img-responsive" src="${contextRoot }/custom/images/1.jpg" alt="">
                         </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>					
                     </div>
                     <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project One</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                        <p>사단법인 코인트리 볼리비아 지부의 선생님들 입니다.  희망꽃학교 교육센터를 비롯 3개의 도서관과 함께 2017년부터는 기숙사를 운영하고 있습니다. 언제나 웃음을 잃지 않으시고 기쁨으로 아이들과 지내고 있답니다!</p>
                     </div>
                 </div>
             </div>
@@ -24,11 +22,10 @@
                         <div class="overflow-hidden">
                             <img class="img-responsive" src="${contextRoot }/custom/images/2.jpg" alt="">
                         </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>                   
                     </div>
                     <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project Two</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                        <p>2017년 크리스마스 행사가 볼리비아 뽀꼬뽀꼬 마을에서 있었습니다. 이번 크리스마스에는 600명에게 선물을 나누고, 9개 마을에서 재밌는 프로그램으로 크리스마스 파티를 열었답니다. 부모와 아이들과 함께 어우러진 즐거운 시간이었습니다.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -38,11 +35,9 @@
                         <div class="overflow-hidden">
                             <img class="img-responsive" src="${contextRoot }/custom/images/3.jpg" alt="">
                         </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>                   
                     </div>
                     <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project Three</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                        <p>아이들과 1박 2일 수학여행을 다녀왔습니다. 도시의 문물도 보고, 선생님들과 아이들의 유대감이 더욱 깊어지는 시간이었습니다. 학부모님들도 함께 동행하여 섬겨주었답니다.  아이들의 미소가 참 행복해보이죠?  이사장님이 가장 신났다고 하네요.</p>
                     </div>
                 </div>
             </div>
@@ -52,11 +47,9 @@
                         <div class="overflow-hidden">
                             <img class="img-responsive" src="${contextRoot }/custom/images/4.jpg" alt="">
                         </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>                   
                     </div>
                     <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project Four</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                        <p>한국에서도 23명의 서포터즈들이 코인트리를 알리고, 즐거운 나눔 문화, 소액기부 문화의 확산을 위해 여러 이벤트를 열고 있답니다. 길거리 버스킹, 벼룩시장, 토크 콘서트 등.  2월에는 서포터즈들과 함께 스리랑카 해외 봉사가 예정되어 있답니다. </p>
                     </div>
                 </div>
             </div>
@@ -99,7 +92,7 @@
     		<div class="col-md-4 md-margin-bottom-40"  align="center">
     			<div class="headline"><h2>Welcome To HappyPoor</h2></div>
               	  <div class="responsive-video margin-bottom-30">
-                    <iframe src="http://player.vimeo.com/video/47911018" width="300" height="150" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/AFRHVyrqYf0" width="300" height="150" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </div>
             </div><!--/col-md-8-->        
 
@@ -128,8 +121,15 @@
                         </a>
                     </div>
     			</div>
+    			
             </div><!--/col-md-4-->
-
+            
+	<!-- Welcome Block -->
+    		<div class="col-md-4 md-margin-bottom-40"  align="center">
+    			<div class="headline"><h2>재정보고서</h2></div>
+              	  <div class="responsive-video margin-bottom-30">
+                </div>
+            </div><!--/col-md-8-->   
 
             
     	</div>	

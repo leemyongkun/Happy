@@ -599,11 +599,11 @@
                         <div class="overflow-hidden">
                             <img class="img-responsive" src="${contextRoot }/custom/images/1.jpg" alt="">
                         </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>					
+                        <!--  a class="btn-more hover-effect" href="#">read more +</a -->					
                     </div>
                     <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project One</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                        <h3><a class="hover-effect" href="#"></a></h3>
+                        <p>사단법인 코인트리 볼리비아 지부의 선생님들 입니다.  희망꽃학교 교육센터를 비롯 3개의 도서관과 함께 2017년부터는 기숙사를 운영하고 있습니다. 언제나 웃음을 잃지 않으시고 기쁨으로 아이들과 지내고 있답니다!</p>
                     </div>
                 </div>
             </div>
