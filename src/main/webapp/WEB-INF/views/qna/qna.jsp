@@ -293,21 +293,20 @@ A) 아닙니다. 뽀꼬뽀꼬 지역은 학교 건물은 있지만 교육의 질
             	<!-- Contacts -->
                 <div class="headline"><h2>Contacts</h2></div>
                 <ul class="list-unstyled who margin-bottom-30">
-                    <li><a href="#"><i class="fa fa-home"></i>5B Streat, City 50987 New Town US</a></li>
-                    <li><a href="#"><i class="fa fa-envelope"></i>info@example.com</a></li>
-                    <li><a href="#"><i class="fa fa-phone"></i>1(222) 5x86 x97x</a></li>
-                    <li><a href="#"><i class="fa fa-globe"></i>http://www.example.com</a></li>
+                    <li><a href="#"><i class="fa fa-home"></i>서울특별시 서초구 반포대로 30길 55 3층 </a></li>
+                    <li><a href="https://goo.gl/forms/UIb7GT3BBRte3P042" target="_blank"><i class="fa fa-envelope"></i>[코인트리]정기후원링크</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>010-2317-7316</a></li>
                 </ul>
                 <!-- End Contacts -->
 
-            	<!-- Business Hours -->
+            	<!-- Business Hours 
                 <div class="headline"><h2>Business Hours</h2></div>
                 <ul class="list-unstyled margin-bottom-30">
                 	<li><strong>Monday-Friday:</strong> 10am to 8pm</li>
                 	<li><strong>Saturday:</strong> 11am to 3pm</li>
                 	<li><strong>Sunday:</strong> Closed</li>
                 </ul>
-                <!-- End Business Hours -->
+                End Business Hours -->
 
             	<!-- Info Block -->
                <!--  <div class="headline"><h2>Why we are?</h2></div>

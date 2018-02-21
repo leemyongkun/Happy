@@ -11,7 +11,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title><mvc:message code="menu.title" /></title>
+    <title>코인트리 CoinTree 100원의 기적</title>
 	<tiles:insertAttribute name="include_css" />
 </head>	
 <tiles:insertAttribute name="include_js" />
